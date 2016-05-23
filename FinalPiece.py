@@ -26,7 +26,7 @@ Normal = '\033[0;0;0m'
 
 
 
-while True:
+while Trial:
 
     name = raw_input("What's your name? ")
     studentid = raw_input("What is your student ID? ")
@@ -49,7 +49,7 @@ while True:
 
 
             TCP_IP = '10.2.177.212'
-            IP_PORT = 60862
+            IP_PORT = 60933
 
 
             Sec = 0
@@ -61,7 +61,7 @@ while True:
             client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             IP = client_socket.connect((TCP_IP, IP_PORT))
 
-            while True and Trial:
+            while True:
 
 
                 '''Sec += 1
@@ -130,12 +130,15 @@ while True:
                     #    break
                     #print 'Invalid input.'
                     if answer == 'y':
+                        client_socket.close()
+                        client_socket.connect
                         break
                     if answer == 'n':
                         text_file.close()
                         print 'Goodbye'
-                        break
                         Trial = False
+                        break;
+
 
             break;
 
@@ -146,21 +149,11 @@ while True:
 
         time.sleep(1)
         print "Bye!"
+        Trial = False
 
 
 
 
     quit
 
-    #Key information, on the phone go to the settings and deselect all options except DM
-    #Then change your recording rate to 1 s
 
-
-    #(v)Time Balance - stop on specific value
-    #reset button
-    #(ignore?)Telemetry data
-    #(v)student input (name and id)
-    #(v)Date included in Text file
-
-
-    #Different trials
